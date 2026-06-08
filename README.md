@@ -9,18 +9,18 @@ This project applies big data tools to analyse NHS England metformin prescriptio
 The work is split into two main parts:
 
 - **Part 1 – Batch analytics with Spark (NHS prescriptions)**  
-  - Ingests a large prescription dataset (`Diabetes.csv`) for metformin across GP practices in Tower Hamlets. [file:183][file:184]  
-  - Performs full data engineering in PySpark: cleaning, imputation, feature engineering, scaling, and clustering. [file:181][file:184]  
+  - Ingests a large prescription dataset (`Diabetes.csv`) for metformin across GP practices in Tower Hamlets.  
+  - Performs full data engineering in PySpark: cleaning, imputation, feature engineering, scaling, and clustering.  
   - Trains and evaluates linear regression models to predict prescription `ACTUALCOST`, comparing:
     - Original target model: R ≈ 0.63 and RMSE ≈ 56.25.  
     - Log‑transformed target model: R² ≈ 0.995 and RMSE ≈ 0.0935. [file:181][file:184]  
-  - Visualises results with interactive Power BI dashboards (practice‑level totals, time series, geospatial map, and drill‑down dashboard). [file:184]
+  - Visualises results with interactive Power BI dashboards (practice‑level totals, time series, geospatial map, and drill‑down dashboard). 
 
 - **Part 2 – Real‑time streaming with Kafka (IBM stock data)**  
-  - Uses a Kafka **producer** to fetch IBM stock prices from the Alpha Vantage API at 5‑minute intervals and push them into a Kafka topic. [file:184]  
-  - A Kafka **consumer** reads the stream, prints messages, computes descriptive statistics (average volume, max close, min open), and appends the data to CSV for long‑term storage. [file:184]
+  - Uses a Kafka **producer** to fetch IBM stock prices from the Alpha Vantage API at 5‑minute intervals and push them into a Kafka topic.   
+  - A Kafka **consumer** reads the stream, prints messages, computes descriptive statistics (average volume, max close, min open), and appends the data to CSV for long‑term storage. 
 
-A Streamlit dashboard complements the Spark pipeline by giving an interactive front‑end for exploring the transformed dataset. [file:182][file:184]
+A Streamlit dashboard complements the Spark pipeline by giving an interactive front‑end for exploring the transformed dataset. 
 
 ---
 
@@ -60,7 +60,7 @@ A Streamlit dashboard complements the Spark pipeline by giving an interactive fr
     - Search and filter by any column, displaying matching rows dynamically.
 
 - **`Report.pdf`**  
-  Full academic report documenting the methodology, Spark vs MapReduce comparison, experimental results, Power BI dashboards, Kafka producer/consumer design, and reflective discussion. [file:184]
+  Full academic report documenting the methodology, Spark vs MapReduce comparison, experimental results, Power BI dashboards, Kafka producer/consumer design, and reflective discussion. 
 
 - **`Diabetes.pbix`**  
   Power BI report with: [file:184]  
